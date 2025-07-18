@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLW 20</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <span id="logo">🤖</span>
+        <h1> IA Gamer - Dicas Personalizadas para CSGO, Valorant e Mobile Legends!</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+                <form id="form">
+                    <input type="password" id="apiKey" placeholder="Informe a API KEY do Gemini">
+
+                    <select id="gameSelect" required>
+                        <option value="" disabled selected hidden>Selecione um jogo</option>
+                        <option value="mobilelegends">Mobile Legends</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="csgo">CS:GO</option>
+                    </select>
+
+                    <input type="text" id="question" placeholder="Ex: Melhor build para ADC...">
+
+                    <button id="askButton">Perguntar</button>
+                </form>
+
+                <div id="aiResponse" class="hidden">
+                    <div class="response-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por
+            <span class="desenvolvidoName">Vinicius Teobaldo</span>
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

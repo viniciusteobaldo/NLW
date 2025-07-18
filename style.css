@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #f03a17 0%, #ff7a45 50%, #31d2f7 100%);
+  background-size: 100% auto;
+  background-color: #121214;
+  color: #ffffff;
+}
+
+body * {
+  font-family: "Inter";
+  line-height: 160%;
+}
+
+header {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header #logo {
+  display: inline;
+  font-size: 6rem;
+}
+
+main {
+  max-width: 36rem;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+section {
+  background: linear-gradient(90deg, #044958 0%, rgb(39, 183, 216) 30%, #31d2f7 60%, #31d2f7 100%);
+  border-radius: 0.625rem;
+  padding-top: 4px;
+}
+
+section>div {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  background-color: #2a2634;
+  border-radius: 0.5rem;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #fff;
+}
+
+#aiResponse {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid #f03a17;
+}
+
+#aiResponse ul,
+#aiResponse ol {
+  padding-left: 2rem;
+  opacity: 0.8;
+}
+
+#aiResponse p {
+  color: rgb(255, 255, 255);
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: .875rem;
+  color: #333;
+}
+
+span.desenvolvidoName {
+  color: #fff;
+  font-size: .675rem;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animações */
+main section {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Formulário */
+
+form {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+
+input,
+select {
+  all: unset;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  padding: 0.675rem;
+  font-size: 0.875rem;
+  background-color: #00000066;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  padding: 0.675rem;
+  background: #31d2f7;
+  border-radius: 0.5rem;
+  border: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: all 0.3s;
+  box-shadow: 0 5px 1rem rgba(107, 225, 255, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  cursor: not-allowed;
+  color: black;
+}
+
+.loading {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
